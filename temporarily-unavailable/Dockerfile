@@ -1,16 +1,16 @@
-FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:5.0 AS build
 WORKDIR /app
 
 # restore app (in a separate layer to speed up the build)
-COPY ./coming-soon.csproj ./coming-soon.csproj
-RUN dotnet restore ./coming-soon.csproj
+COPY ./temporarily-unavailable.csproj ./temporarily-unavailable.csproj
+RUN dotnet restore ./temporarily-unavailable.csproj
 
 # copy and build app
 COPY ./ ./
 RUN dotnet publish -c Release -o out
 
 
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS runtime
+FROM mcr.microsoft.com/dotnet/core/aspnet:5.0 AS runtime
 
 # Satisfying Openshift requirements:
 # - this tells it that the app is OK to run under random user id
@@ -22,4 +22,4 @@ ENV ASPNETCORE_URLS=http://*:8080
 WORKDIR /app
 COPY --from=build /app/out ./
 
-ENTRYPOINT ["dotnet", "coming-soon.dll"]
+ENTRYPOINT ["dotnet", "temporarily-unavailable.dll"]

@@ -1,10 +1,13 @@
 ﻿@page "{*:path}"
 @model IndexModel
+@{
+    Layout = "./Shared/_Layout.cshtml";
+}
 
 <div class="nhsuk-width-container">
-    <h1>Coming soon</h1>
-    <p>Welcome to the National Tuberculosis Surveillance System. This application is currently under development
-        and will be available soon!</p>
+    <h1>Temporarily Unavailable</h1>
+    <p>Welcome to the National Tuberculosis Surveillance System. The application is currently undergoing maintenance
+        and will be back up soon.</p>
     @if (!string.IsNullOrWhiteSpace(Model.ReportsUrl)) {
         <p>In the meantime, you can access the new reporting functionality using the button below.</p>
         <a class="nhsuk-button ntbsuk-button--primary" href="@(Model.ReportsUrl)">Reports</a>

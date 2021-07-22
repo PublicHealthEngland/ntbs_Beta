@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "temporarily-unavailable", "temporarily-unavailable\temporarily-unavailable.csproj", "{166DF61B-70AE-4CDD-9347-926167EA7B60}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CBBA06AB-69AA-4CDB-8AB7-A41157E1A737}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBBA06AB-69AA-4CDB-8AB7-A41157E1A737}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBBA06AB-69AA-4CDB-8AB7-A41157E1A737}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBBA06AB-69AA-4CDB-8AB7-A41157E1A737}.Release|Any CPU.Build.0 = Release|Any CPU
+		{166DF61B-70AE-4CDD-9347-926167EA7B60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{166DF61B-70AE-4CDD-9347-926167EA7B60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{166DF61B-70AE-4CDD-9347-926167EA7B60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{166DF61B-70AE-4CDD-9347-926167EA7B60}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

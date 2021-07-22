@@ -1,21 +1,21 @@
-﻿# Coming-soon page app
+﻿# Temporarily-unavailable page app
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: coming-soon
+  name: temporarily-unavailable
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: coming-soon
+      app: temporarily-unavailable
   template:
     metadata:
       labels:
-        app: coming-soon
+        app: temporarily-unavailable
     spec:
       containers:
-        - name: coming-soon-app
-          image: "ntbscontainerregistry.azurecr.io/coming-soon"
+        - name: temporarily-unavailable-app
+          image: "ntbscontainerregistry.azurecr.io/temporarily-unavailable"
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
@@ -29,9 +29,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: coming-soon
+  name: temporarily-unavailable
   labels:
-    app: coming-soon
+    app: temporarily-unavailable
 spec:
   type: ClusterIP
   ports:
@@ -40,4 +40,4 @@ spec:
       port: 8080
       targetPort: 8080
   selector:
-    app: coming-soon
+    app: temporarily-unavailable
